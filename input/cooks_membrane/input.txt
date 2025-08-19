@@ -1,0 +1,14 @@
+version = 7
+meshType = tri
+simName = cooks_membrane
+problemType = plane_elasticity
+planeType = plane_strain
+loadType = distributed_load
+smooth = true
+smoothFitType = linear
+load = 6.25
+E = 70.0
+nu = 0.3333
+thickness = 1.0
+smoothIter = 2
+numThreads = 12

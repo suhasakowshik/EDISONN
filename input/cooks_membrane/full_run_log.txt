@@ -1,0 +1,22 @@
+[INFO] Parsed input parameters:
+  Version: 7
+  Mesh Type: tri
+  Simulation Name: cooks_membrane
+  Problem Type: plane_elasticity
+  Plane Type: plane_strain
+  Load Type: distributed_load
+  Smooth : true
+  Load: 6.25
+  E: 70
+  nu: 0.3333
+  Thickness: 1
+  Smooth Itertaions: 2
+  Num Threads: 12
+Loading nodes...
+Loading elements...
+Loading Displacement boundary conditions...
+Loading Force boundary conditions...
+Detected dimension: 2D
+Conjugate Gradient converged in 994 iterations with estimated error 9.79359e-07
+[INFO] Simulation completed.
+[INFO] Total computation time: 6.39689 seconds.

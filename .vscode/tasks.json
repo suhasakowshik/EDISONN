@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build edisonn (MKL)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-fopenmp",
+                "-g",
+                "-O0",
+                "src/main.cpp",
+                "src/MeshLoader.cpp",
+                "src/EDISONN.cpp",
+                "src/SOLVER.cpp",
+                "src/LSQSmoother.cpp",
+                "-Iinclude",
+                "-I",
+                "/usr/include/eigen3",
+                "-I",
+                "/opt/intel/oneapi/mkl/2025.2/include",
+                "-L",
+                "/opt/intel/oneapi/mkl/2025.2/lib/intel64",
+                "-lmkl_intel_lp64",
+                "-lmkl_gnu_thread",
+                "-lmkl_core",
+                "-lpthread",
+                "-lm",
+                "-ldl",
+                "-o",
+                "edisonn"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "shell": {
+                    "executable": "/bin/bash",
+                    "args": [
+                        "-c"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "cppbuild",
+            "label": "build active file (non-default)",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Task for building only the active file."
+        }
+    ]
+}

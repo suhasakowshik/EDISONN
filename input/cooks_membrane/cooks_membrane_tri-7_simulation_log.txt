@@ -1,0 +1,17 @@
+==== Simulation Log Entry ====
+Version: 7
+Simulation Name: cooks_membrane
+Mesh Type: tri
+Problem Type: plane_elasticity
+Plane Type: plane_strain
+Load Type: distributed_load
+Smooth : true
+Load: 6.25
+E (Young's Modulus): 70
+nu (Poisson's Ratio): 0.3333
+Thickness: 1
+Smooth Itertaions: 2
+Num Threads: 12
+Total computation time: 6.39689 seconds.
+==============================
+
