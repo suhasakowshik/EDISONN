@@ -1,7 +1,7 @@
 
 # EDISONN: Estimation-based Direct Simulation on Nodal Networks (C++)
 
-Locking-free, interpolation-free mechanics solver that operates directly on nodal networks.  
+Locking-free, interpolation-free mechanics solver that operates directly on gradient estimation using nodal networks.  
 
 ---
 
