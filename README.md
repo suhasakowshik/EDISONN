@@ -2,7 +2,6 @@
 # EDISONN: Estimation-based Direct Simulation on Nodal Networks (C++)
 
 Locking-free, interpolation-free mechanics solver that operates directly on nodal networks.  
-EDISONN avoids traditional element shape functions by using local estimation (e.g., LSQ/MLS) for gradients and nodal quadrature for residuals—supporting structural and continuum problems on unstructured meshes.
 
 ---
 
@@ -10,10 +9,10 @@ EDISONN avoids traditional element shape functions by using local estimation (e.
 
 - **Interpolation-free formulation:** gradient estimation from nodal connectivity, no element shape functions.
 - **Locking-resistant:** robust under near-incompressibility and shear-dominated regimes.
-- **2D/3D support:** linear elasticity; hooks for finite strain, viscoelastic add-ons.
+- **2D/3D support:** linear elasticity; hooks for finite strain, viscoelastic add-ons (wiil be added later).
 - **Unstructured meshes:** triangles/quads/tets/hexes; can operate on graph connectivity.
 - **Parallelism:** OpenMP on CPU;
-- **Modular:** pluggable gradient estimators, quadrature, solvers (CG/GMRES), and preconditioners.
+- **Modular:** pluggable gradient estimators, solvers (CG), and preconditioners.
 - **I/O:** simple mesh readers and BC reader in .txt and text output.
 
 ---
@@ -102,4 +101,4 @@ File names are determined by `simName`, `meshType`, and `version` in `input.txt`
 
 ## License
 
-MIT License or specify one.
+MIT License.
